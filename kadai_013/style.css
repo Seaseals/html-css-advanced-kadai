@@ -1,7 +1,5 @@
 /* PC、スマホ共通スタイル */
 body {
-   min-width: 375px;
-   margin: 0 auto 0 auto; 
    font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial,
     sans-serif;
 }
@@ -72,7 +70,7 @@ PC用のスタイル
   @media screen and (max-width: 767px) {
 body{
   min-width: 375px;
-  margin: 0 auto 0 auto; 
+  margin: 0; 
 }
      #nav-pc { 
      display: none;
@@ -88,7 +86,15 @@ body{
      /* border: none; */
    }
 
-   
+     #menu {
+     display: block;
+     background-color: transparent;
+     /* 要素の並びを指定し、ヘッダーの中で右寄せにする */
+     float: right;
+     padding: 0;
+     /* 要素の境界線なし */
+     border: none;
+   }
 
    /* スマホ用ナビゲーションの表示切替*/
    /* 初期状態、レイアウトと非表示設定 */
@@ -142,13 +148,12 @@ body{
  /* リンク */
     #nav-sp a {
     display: block;
-    /* color: #ffffff; */
   }
 
-  #nav-spa:link{
+  #nav-sp a:link{
     color:	#ffffff;
   }
-  #nav-spa:visited{
+  #nav-sp a:visited{
      color:	#ffffff;
   }
 
