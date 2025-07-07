@@ -1,0 +1,179 @@
+/* PC、スマホ共通スタイル */
+body {
+   min-width: 375px;
+   margin: 0 auto 0 auto; 
+   font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial,
+    sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+#main-visual>img {
+  width: 100%;
+}
+
+/*================
+PC用のスタイル 
+=================*/
+@media screen and (min-width: 768px) {
+  /* 横幅設定 */
+  body {
+    max-width: 1080px;
+    min-width: 960px;
+    margin: 0 auto 0 auto;
+  }
+
+  /* ヘッダー */
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ナビゲーションのレイアウト */
+  #nav-pc {
+    text-align: right;
+    font-size: 14px;
+    padding-top: 15px;
+  }
+
+  /* ナビゲーションのリンクの装飾設定 */
+  #nav-pc>a {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+
+  #nav-pc>a:link {
+    color: #0d0d0d;
+  }
+
+  #nav-pc>a:visited {
+    color: #0d0d0d;
+  }
+
+  #nav-pc>a:hover {
+    color: #0d0d0d;
+    text-decoration: underline;
+  }
+
+  #nav-pc>a:active {
+    color: #0d0d0d;
+  }
+
+#menu{
+     display: none;
+   }
+
+}
+
+/* ここから 新しく書き入れる*/
+  /* ハンバーガーメニュー */
+  @media screen and (max-width: 767px) {
+body{
+  min-width: 375px;
+  margin: 0 auto 0 auto; 
+}
+     #nav-pc { 
+     display: none;
+    }
+    
+   #menu-sp {
+     /* display: block; */
+     /* background-color: transparent; */
+     /* 要素の並びを指定し、ヘッダーの中で右寄せにする */
+     float: right;
+     padding: 0;
+     /* 要素の境界線なし */
+     /* border: none; */
+   }
+
+   
+
+   /* スマホ用ナビゲーションの表示切替*/
+   /* 初期状態、レイアウトと非表示設定 */
+   #nav-sp {
+     background-color: #ce933e;
+     /* 配置（position）：固定（fixed）を指定し、
+     leftとtopに0を指定することで親要素の左上に配置する */
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     width: 100%;
+     /* 表示方法：非表示 */
+     display: none;
+     /* 100を指定し、どの要素よりも上に重ねる */
+     z-index: 100;
+   }
+
+  #nav-sp ul {
+    /* 左側の余白（ padding ）をなくす（ 0 ） */
+     padding-left: 0;
+   }
+ 
+   #nav-sp li {
+    /* マーカー（ list-style ）なし（ none ）で表示 */
+     list-style: none;
+   }
+
+    /* ×ボタン */
+    /* 閉じるボタンの画像 */
+   #close {
+    /* 配置（position）：絶対位置（absolute）を指定し、
+    親要素（#nav_sp）の右上の角を基準位置として、
+    上側（top）と右側（right）にそれぞれ20pxに設定する。（右上の角から内側へ20pxの位置に配置する）。 */
+     position: absolute;
+     top: 20px;
+     right: 20px;
+     /* background-color: transparent; */
+     /* border境界線 はなし(none)*/
+     /* border: none; */
+   }
+ 
+   
+ 
+   /* ナビゲーションメニュー用ロゴ */
+   #logo-sp {
+     margin: 80px 0 30px 20px;
+   }
+  
+   /* ナビゲーションのリンクの装飾設定 */
+ /* リンク */
+    #nav-sp a {
+    display: block;
+    /* color: #ffffff; */
+  }
+
+  #nav-spa:link{
+    color:	#ffffff;
+  }
+  #nav-spa:visited{
+     color:	#ffffff;
+  }
+
+ /* リンクの疑似クラスホバー時 */
+  #nav-sp a:hover {
+    color:	#ffffff;
+     text-decoration: underline;
+   }
+
+#nav-sp a:active{
+color:	#ffffff;
+}
+
+ /* リンクの背景 */
+   #nav-sp .menu {
+     text-decoration: none;
+     display: block;
+     margin: 0 20px 0 20px;
+     height: 44px;
+     font-size: 16px;
+     /* 要素の背景として画像を表示する */
+     background-image: url("images/arrow.png");
+     /* 背景のリピート（繰り返し）方法 */
+     background-repeat: no-repeat;
+     /* 背景の位置 */
+     background-position: right top;
+   }
+  }
